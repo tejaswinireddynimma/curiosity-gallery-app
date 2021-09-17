@@ -1,0 +1,23 @@
+
+<div class="container">
+    <form id="searchForm" class="mb-20" [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm.value)">
+        <div class="form-check form-check-inline">
+            <label class="p10">Search Date</label>
+            <input class="p10" type="text" id="searchDate"
+                placeholder="dd/mm/yyyy"
+                class="form-control"
+                formControlName="searchDate"
+                ngbDatepicker
+                #searchDatePicker="ngbDatepicker"
+                (click)="searchDatePicker.toggle()"
+                [minDate]="minDate"
+                [maxDate]="maxDate"
+                />
+                <button type="submit" class="btn btn-primary getImage">Get Images</button>
+          </div>
+        
+    </form>
+    <h4 *ngIf="showLoading">Fetching Images....</h4>
+    <app-gallery *ngIf="imagesResponse?.photos?.length > 0" [photos]="imagesResponse?.photos"></app-gallery>
+    <h4 *ngIf="showMessage">{{showMessage}}</h4>
+</div>

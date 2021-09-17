@@ -1,0 +1,13 @@
+.banner{
+    background-image: url(https://api.nasa.gov/assets/img/hero.png);
+    background-position: 50%;
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    height: 200px;
+}
+
+.banner h2{
+    color: rgb(167, 147, 95);
+    text-align: right;
+}

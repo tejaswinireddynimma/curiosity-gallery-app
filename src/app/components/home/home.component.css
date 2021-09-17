@@ -1,0 +1,17 @@
+#searchForm{
+    padding-top: 2rem;
+}
+
+.p10{
+    padding-right: 10px;
+}
+
+
+.form-check-inline label{
+    width: 180px;
+}
+
+.getImage{
+    width: 180px;
+    margin-left: 10px;
+}
